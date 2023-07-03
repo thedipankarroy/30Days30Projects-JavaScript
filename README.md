@@ -3,3 +3,4 @@
 
 ## Projects
 - [🌈 Color Palette Generator](https://colooro.netlify.app/)
+    - Library used: chroma.js
