@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Color Flipper</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.2/chroma.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="style.css" />
+	</head>
+	<body>
+		<div id="root">
+			<main id="site">
+				<header class="site__header">
+					<div class="header__wrapper">
+						<!--Branding-->
+						<div class="branding">
+							<p>colo.ro</p>
+						</div>
+						<!--RGB, HEX-->
+						<nav class="navigation__bar">
+							<button
+								class="navigation__button"
+								id="rgb">
+								RGB
+							</button>
+							<button
+								class="navigation__button"
+								id="hex">
+								HEX
+							</button>
+						</nav>
+					</div>
+				</header>
+				<section id="site__inner">
+					<div
+						class="inner__wrapper"
+						id="inner__wrapper">
+						<!--Output of the colour-->
+						<div
+							class="palete"
+							id="palete">
+							<div
+								id="color1"
+								class="color1"></div>
+							<div
+								id="color2"
+								class="color1"></div>
+							<div
+								id="color3"
+								class="color1"></div>
+							<div
+								id="color4"
+								class="color1"></div>
+							<div
+								id="color5"
+								class="color1"></div>
+						</div>
+                        <div class="hidden" id="hidden">
+                                ,kjvjufyujf
+                        </div>
+						<!--Generate button-->
+						<div class="button_space">
+							<button id="generate">Generate</button>
+							<svg
+								class="copy__svg"
+								id="copy"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 384 512">
+								<!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M192 0c-41.8 0-77.4 26.7-90.5 64H64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H282.5C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM112 192H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+							</svg>
+						</div>
+					</div>
+				</section>
+				<!-- <footer class="site__footer">
+					<div class="footer__wrapper">
+						TODO: MAKE SOMETHING ON FIGMA WHICH WOULD BE SAME FOR EVERYONE WITH
+						SOME CHANGES
+					</div>
+				</footer> -->
+			</main>
+		</div>
+		<script
+			type="module"
+			src="index.js"></script>
+	</body>
+</html>
