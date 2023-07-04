@@ -14,8 +14,7 @@
     --primary-button: #3649d9;
     --secondary-button: #090d2f;
     --accent: #273bce;
-
-
+    
      /* Step -4: 8.68px → 8.60px */
   --step--4: clamp(0.54rem, calc(0.54rem + -0.01vw), 0.54rem);
 

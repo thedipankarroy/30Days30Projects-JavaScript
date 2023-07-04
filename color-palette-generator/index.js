@@ -84,7 +84,6 @@ window.addEventListener("load", function () {
     generation();
 })
 
-
 // // BOX SHADOW ON GENERATE BUTTON
 // generateBtn.addEventListener("mouseout", function () {
 //     generateBtn.style.boxShadow = 'none';
