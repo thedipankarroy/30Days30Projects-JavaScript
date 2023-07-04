@@ -28,8 +28,10 @@ generateBtn.addEventListener("click", function () {
         // let randomColor = (Math.floor(Math.random()*(1677215 - 1048576 + 1)) + 1048576).toString(16);
         Color = chroma.random();
         Color1 = chroma.random();
-        Color2 = chroma.average([Color, Color1]);
-        Color3 = chroma.average([Color2, Color3]);
+        let colorarr1 = [Color, Color1];
+        Color2 = chroma.average(colorarr1);
+        let colorarr2 = [Color2, Color1];
+        Color3 = chroma.average(colorarr2);
 
         // GENERATING THE COLORPALETTE USING CHROMA SCALE
         colorPalette = chroma.scale([Color, Color1, Color2, Color3]).mode("lrgb").colors(5);
