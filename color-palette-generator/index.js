@@ -2,7 +2,7 @@
 let generateBtn = document.getElementById("generate");
 let site = document.getElementById("palete");
 let copy = document.getElementById("copy");
-
+let body = document.getElementById("body");
 
 // CONVERT ELEMENTS
 let rgb = document.getElementById("rgb");
@@ -16,66 +16,82 @@ let fourthColor = document.getElementById("color4");
 let fifthColor = document.getElementById("color5");
 
 // GLOBAL VARIABLES
-let Color, Color1, Color2, Color3;
+let primary;
 let colorPalette;
 
-
-
-// GENERATE BUTTON EVENT LISTENER
-generateBtn.addEventListener("click", function () {
+// MAIN FUNCTIONS WHICH GENERATES COLORS
+function generation ()
+{
     // DELAY GENERATING COLOURS
     setTimeout(function () {
         // let randomColor = (Math.floor(Math.random()*(1677215 - 1048576 + 1)) + 1048576).toString(16);
-        Color = chroma.random();
-        Color1 = chroma.random();
-        let colorarr1 = [Color, Color1];
-        Color2 = chroma.average(colorarr1);
-        let colorarr2 = [Color2, Color1];
-        Color3 = chroma.average(colorarr2);
+        primary = chroma.random();
+        
 
         // GENERATING THE COLORPALETTE USING CHROMA SCALE
-        colorPalette = chroma.scale([Color, Color1, Color2, Color3]).mode("lrgb").colors(5);
+        colorPalette = chroma.scale(["white", primary]).mode("lrgb").colors(7);
 
         // SHOWING THE NAME OF THE COLORS
-        firstColor.style.backgroundColor = colorPalette[0];
-        secondColor.style.backgroundColor = colorPalette[1];
-        thirdColor.style.backgroundColor = colorPalette[2];
-        fourthColor.style.backgroundColor = colorPalette[3];
-        fifthColor.style.backgroundColor = colorPalette[4];
+        firstColor.style.backgroundColor = chroma(colorPalette[1]);
+        secondColor.style.backgroundColor = chroma(colorPalette[2]);
+        thirdColor.style.backgroundColor = chroma(colorPalette[3]);
+        fourthColor.style.backgroundColor = chroma(colorPalette[4]);
+        fifthColor.style.backgroundColor = chroma(colorPalette[5]);
 
-        firstColor.textContent = colorPalette[0];
-        secondColor.textContent = colorPalette[1];
-        thirdColor.textContent = colorPalette[2];
-        fourthColor.textContent = colorPalette[3];
-        fifthColor.textContent = colorPalette[4];
-    }, 200)
-});
+        firstColor.textContent = colorPalette[1];
+        secondColor.textContent = colorPalette[2];
+        thirdColor.textContent = colorPalette[3];
+        fourthColor.textContent = colorPalette[4];
+        fifthColor.textContent = colorPalette[5];
 
 
+        // body.style.backgroundColor = chroma(colorPalette[2]).brighten();
 
-// CHANGING THE OUTPUT FORMAT
+        body.style.color = chroma(colorPalette[3]).darken(2);
+        rgb.style.color = chroma(colorPalette[3]).darken(2);
+        hex.style.color = chroma(colorPalette[3]).darken(2);
+        generateBtn.style.color = chroma(colorPalette[3]).darken(2);
 
-// TO RGB FORMAT
-rgb.addEventListener("click", function () {
-    firstColor.textContent = chroma(colorPalette[0]).css('rgb');
-    secondColor.textContent = chroma(colorPalette[1]).css('rgb');
-    thirdColor.textContent = chroma(colorPalette[2]).css('rgb');
-    fourthColor.textContent = chroma(colorPalette[3]).css('rgb');
-    fifthColor.textContent = chroma(colorPalette[4]).css('rgb');
-})
-
-// TO HEX
-hex.addEventListener("click", function () {
+        rgb.style.borderColor = chroma(colorPalette[3]).darken(2);
+        hex.style.borderColor = chroma(colorPalette[3]).darken(2);
+        generateBtn.style.borderColor = chroma(colorPalette[3]).darken(2);
+        console.table(colorPalette);
+    }, 300)
+}
+function hexConvert () 
+{
     firstColor.textContent = chroma(colorPalette[0]).hex();
     secondColor.textContent = chroma(colorPalette[1]).hex();
     thirdColor.textContent = chroma(colorPalette[2]).hex();
     fourthColor.textContent = chroma(colorPalette[3]).hex();
     fifthColor.textContent = chroma(colorPalette[4]).hex();
+}
+function rgbConvert () 
+{
+    firstColor.textContent = chroma(colorPalette[0]).css('rgb');
+    secondColor.textContent = chroma(colorPalette[1]).css('rgb');
+    thirdColor.textContent = chroma(colorPalette[2]).css('rgb');
+    fourthColor.textContent = chroma(colorPalette[3]).css('rgb');
+    fifthColor.textContent = chroma(colorPalette[4]).css('rgb');
+}
+
+// GENERATE BUTTON EVENT LISTENERS
+generateBtn.addEventListener("click", generation);
+
+// BOX SHADOW ON GENERATE BUTTON
+generateBtn.addEventListener("mouseout", function () {
+    generateBtn.style.boxShadow = 'none';
+});
+generateBtn.addEventListener("mouseover", function () {
+    generateBtn.style.boxShadow = colorPalette[4];
+});
+
+
+// ON PAGE LOAD
+window.addEventListener("load", function () {
+    generation();
 })
 
-
-
-// COPY
-copy.addEventListener("click", function() {
-    
-})
+// RGB AND HEX
+rgb.addEventListener("click", rgbConvert)
+hex.addEventListener("click", hexConvert)
