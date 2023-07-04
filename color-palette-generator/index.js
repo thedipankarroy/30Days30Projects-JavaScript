@@ -27,9 +27,9 @@ generateBtn.addEventListener("click", function () {
     setTimeout(function () {
         // let randomColor = (Math.floor(Math.random()*(1677215 - 1048576 + 1)) + 1048576).toString(16);
         Color = chroma.random();
-        Color1 = chroma(Color).brighten(2);
-        Color2 = chroma.random();
-        Color3 = chroma(Color2).brighten(2);
+        Color1 = chroma.random();
+        Color2 = chroma.average([Color, Color1]);
+        Color3 = chroma.average([Color2, Color3]);
 
         // GENERATING THE COLORPALETTE USING CHROMA SCALE
         colorPalette = chroma.scale([Color, Color1, Color2, Color3]).mode("lrgb").colors(5);
