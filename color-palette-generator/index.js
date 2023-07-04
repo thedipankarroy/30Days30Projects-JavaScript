@@ -85,13 +85,13 @@ window.addEventListener("load", function () {
 })
 
 
-// BOX SHADOW ON GENERATE BUTTON
-generateBtn.addEventListener("mouseout", function () {
-    generateBtn.style.boxShadow = 'none';
-});
-generateBtn.addEventListener("mouseover", function () {
-    generateBtn.style.boxShadow = '0px 5px 28px 7px' + colorPalette[2];
-}, 100);
+// // BOX SHADOW ON GENERATE BUTTON
+// generateBtn.addEventListener("mouseout", function () {
+//     generateBtn.style.boxShadow = 'none';
+// });
+// generateBtn.addEventListener("mouseover", function () {
+//     generateBtn.style.boxShadow = '0px 5px 28px 7px' + colorPalette[2];
+// }, 100);
 
 // RGB AND HEX
 rgb.addEventListener("click", rgbConvert)
