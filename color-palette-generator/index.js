@@ -45,7 +45,7 @@ function generation ()
         fifthColor.textContent = colorPalette[5];
 
 
-        // body.style.backgroundColor = chroma(colorPalette[2]).brighten();
+        body.style.backgroundColor =  chroma(colorPalette[3]).brighten();
 
         body.style.color = chroma(colorPalette[3]).darken(2);
         rgb.style.color = chroma(colorPalette[3]).darken(2);
