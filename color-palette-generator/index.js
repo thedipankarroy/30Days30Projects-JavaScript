@@ -75,22 +75,23 @@ function rgbConvert ()
     fifthColor.textContent = chroma(colorPalette[4]).css('rgb');
 }
 
-// GENERATE BUTTON EVENT LISTENERS
+// GENERATE BUTTON EVENT LISTENER
 generateBtn.addEventListener("click", generation);
-
-// BOX SHADOW ON GENERATE BUTTON
-generateBtn.addEventListener("mouseout", function () {
-    generateBtn.style.boxShadow = 'none';
-});
-generateBtn.addEventListener("mouseover", function () {
-    generateBtn.style.boxShadow = colorPalette[4];
-});
 
 
 // ON PAGE LOAD
 window.addEventListener("load", function () {
     generation();
 })
+
+
+// BOX SHADOW ON GENERATE BUTTON
+generateBtn.addEventListener("mouseout", function () {
+    generateBtn.style.boxShadow = 'none';
+});
+generateBtn.addEventListener("mouseover", function () {
+    generateBtn.style.boxShadow = '0px 5px 28px 7px' + colorPalette[2];
+}, 100);
 
 // RGB AND HEX
 rgb.addEventListener("click", rgbConvert)
