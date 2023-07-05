@@ -3,4 +3,5 @@
 
 ## Projects
 - [🌈 Color Palette Generator](https://colooro.netlify.app/)
-- [1️⃣ Counter](https://counteer.netlify.app/)
+- [🔢 Counter](https://counteer.netlify.app/)
+- [🖋️ Feedback Page]()
