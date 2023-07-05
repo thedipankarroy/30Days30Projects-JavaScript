@@ -1,0 +1,185 @@
+:root {
+	--step--6: clamp(0.34rem, calc(0.39rem + -0.05vw), 0.38rem);
+	--step--5: clamp(0.43rem, calc(0.46rem + -0.03vw), 0.45rem);
+	--step--4: clamp(0.54rem, calc(0.54rem + -0.01vw), 0.54rem);
+	--step--3: clamp(0.65rem, calc(0.65rem + 0.03vw), 0.67rem);
+	--step--2: clamp(0.78rem, calc(0.76rem + 0.08vw), 0.84rem);
+	--step--1: clamp(0.94rem, calc(0.91rem + 0.16vw), 1.05rem);
+	--step-0: clamp(1.13rem, calc(1.07rem + 0.27vw), 1.31rem);
+	--step-1: clamp(1.35rem, calc(1.27rem + 0.42vw), 1.64rem);
+	--step-2: clamp(1.62rem, calc(1.5rem + 0.62vw), 2.05rem);
+	--step-3: clamp(1.94rem, calc(1.77rem + 0.89vw), 2.56rem);
+	--step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.2rem);
+	--step-5: clamp(2.8rem, calc(2.45rem + 1.72vw), 4.01rem);
+	--step-6: clamp(3.36rem, calc(2.89rem + 2.35vw), 5.01rem);
+	--step-7: clamp(4.03rem, calc(3.39rem + 3.18vw), 6.26rem);
+
+    /* COLOURS */
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --background-color: #f2f2f2;
+    --text-color: #555555;
+    --accent-color: #3498db;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+   
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.15s ease-in-out; 
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+}
+
+.site__header {
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+hr {
+	width: 100px;
+	height: 3px;
+	margin: auto;
+	border: none;
+    background-color: var(--secondary-color)
+}
+
+.title {
+	font-size: var(--step-3);
+	margin-bottom: 10px;
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.reviews__box {
+	width: min(100% - 8rem, 40ch);
+	margin-inline: auto;
+	border-radius: var(--step-1);
+    box-shadow: 0px 0px 17px 6px rgba(52, 152, 219, 0.15);
+	padding: 20px;
+    transform: translate(0% , 10%);
+}
+
+
+.img__container img {
+	width: 120px;
+	border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.person__name {
+    font-size: var(--step-1);
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.person__title {
+    font-size: var(--step--2);
+    text-transform: uppercase;
+    color: var(--accent-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.person__review {
+    font-size: var(--step--1);
+    margin-top: 10px;
+}
+
+
+/* Buttons */
+.button__space {
+    margin-top: 30px;
+}
+
+.reviews__box button {
+    transition: color 0.1s, all 0.2s ease-in-out;
+    font-size: var(--step--1);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0px 0px 2px 1px rgba(52, 152, 219, 0.2);
+}
+
+.changeuserkeys {
+    display: flex;
+    justify-content: center;
+    column-gap: var(--step--3);
+}
+
+.rightleft {
+    padding: 2px 7px;
+    border-radius: 3px;
+}
+
+.surprise-key {
+    padding: 3px 8px;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+.rightleft:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--background-color);
+    border-radius: 50%;
+}
+
+.surprise-key:hover{
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+/* Footer */
+.footer__wrapper {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-around;
+}
+.footer__wrapper > * {
+    color: var(--background-color);
+    margin-top: 18px;
+    margin-inline: 9px;
+}
+.logo {
+    margin-top: -7px;
+    height: 40px;
+    fill: var(--background-color);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--background);
+}
