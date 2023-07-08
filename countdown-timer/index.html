@@ -6,6 +6,9 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 		<title>Countdown</title>
+		<link
+			rel="manifest"
+			href="manifest.json" />
 
 		<!-- styles -->
 		<link
@@ -14,12 +17,21 @@
 	</head>
 	<body>
 		<section class="section-center">
+			<!--Buttons-->
+			<button class="zenmode mode zen">Zen</button>
+			<button class="normalmode mode normal">Normal</button>
 			<!--set Date-->
+			<label
+				for="userInput"
+				class="zen"
+				>Select Date</label
+			>
 			<input
+				class="zen"
 				type="datetime-local"
 				id="userInput" />
 			<button
-				class="start"
+				class="start function zen"
 				id="getValue"
 				onclick="start()">
 				Start
@@ -61,13 +73,13 @@
 			</div>
 			<!--reset-->
 			<button
-				class="reset"
+				class="reset function zen"
 				onclick="reset()">
 				Reset
 			</button>
 		</section>
 		<!--Footer-->
-		<footer class="site__footer">
+		<footer class="site__footer zen">
 			<div class="footer__wrapper">
 				<p>Part Of 30Days30Projects Challenge</p>
 				<a href="https://github.com/thedipankarroy">
@@ -82,6 +94,7 @@
 			</div>
 		</footer>
 		<!-- javascript -->
+		<script src="service-worker.js"></script>
 		<script src="index.js"></script>
 	</body>
 </html>

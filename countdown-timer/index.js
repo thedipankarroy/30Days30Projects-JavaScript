@@ -5,6 +5,9 @@ const deadline = document.querySelector(".deadline")
 const valuesOnSite = document.querySelectorAll(".deadline-format h4")
 const userInput = document.querySelector("#userInput")
 const ms = document.querySelector(".milliseconds")
+const zen = document.querySelector(".zenmode")
+const normal = document.querySelector(".normalmode")
+const zenMode = document.querySelectorAll(".zen")
 
 // ==================
 // Global Variables
@@ -24,6 +27,20 @@ window.addEventListener("load", () => {
 	}
 	start()
 })
+zen.addEventListener("click", () => {
+	zenMode.forEach((element) => {
+		element.style.display = "none"
+	})
+	normal.style.display = "block"
+})
+normal.addEventListener("click", () => {
+	zenMode.forEach((element) => {
+		element.style.display = "block"
+	})
+	zen.style.display = "block"
+	normal.style.display = "none"
+})
+
 
 // ==========
 // Functions
@@ -51,7 +68,6 @@ function getRemainingTime() {
 	valuesOnSite.forEach(function (value, index) {
 		value.innerHTML = format(valuesOfRemaningTime[index])
 	})
-
 
 	if (remainingtime <= 0) {
 		reset()

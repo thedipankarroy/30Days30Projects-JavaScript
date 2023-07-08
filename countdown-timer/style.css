@@ -25,10 +25,10 @@
 	--step-7: clamp(4.03rem, calc(3.39rem + 3.18vw), 6.26rem);
 
 	/* CSS LIGHT */
-	--secondary: #a9a9a9;
-	--accent: #ff7f50;
-	--bg: #f2f2f2;
-	--text-color: #333333;
+	--secondary: #e0e0e0;
+	--accent: #87ceeb;
+	--bg: #ffffff;
+	--text-color: #000000;
 }
 
 /* ============ */
@@ -55,7 +55,7 @@ section {
 	transform: translate(-50%, -50%);
 	max-width: 1100px;
 }
-button {
+button.function {
 	font-size: var(--step-0);
 	padding: 10px 30px;
 	margin-inline: auto;
@@ -63,10 +63,6 @@ button {
 	border-radius: 8px;
 	transition: all 0.15s ease-in-out;
 	border: 1px solid var(--text-color);
-}
-button:hover {
-	color: var(--bg);
-	background-color: var(--text-color);
 }
 input {
 	background-color: var(--bg);
@@ -80,6 +76,11 @@ input {
 	background-color: var(--bg);
 	font-size: var(--step--2);
 	font-family: "Roboto Mono", monospace;
+}
+label {
+	text-align: center;
+	font-size: var(--step-0);
+	margin-bottom: 10px;
 }
 
 /* ============ */
@@ -106,9 +107,11 @@ input {
 	margin-bottom: -9px;
 	font-family: "Roboto Mono", monospace;
 	font-weight: 300;
+	color: var(--text-color);
 }
 .deadline-format span {
 	font-size: var(--step--1);
+	color: var(--text-color);
 }
 .deadline-format .milliseconds {
 	position: relative;
@@ -116,7 +119,8 @@ input {
 	margin: auto;
 }
 .milli {
-	background-color: var(--text-color);
+	background-color: var(--accent);
+	color: var(--text-color);
 	padding: 0px 20px 0px 20px;
 	border-radius: 0px 4px 4px 0px;
 }
@@ -149,6 +153,21 @@ input {
 	height: 40px;
 	fill: var(--bg);
 }
+.zenmode, .normalmode{
+	font-size: var(--step--1);
+	margin-inline: auto;
+	position: relative;
+	margin-bottom: 80px;
+	padding: 5px 10px 5px 10px;
+	border: none;
+	border-radius: 4px;
+	transition: all 0.15s ease-in-out;
+	border: 1px solid var(--text-color);
+	font-family: "Roboto Mono", monospace;
+}
+.normalmode {
+	display: none;
+}
 
 /* ================ */
 /* Media Queries */
@@ -171,7 +190,6 @@ input {
 		margin-top: 7px;
 	}
 }
-
 @media screen and (max-width: 462px) {
 	button {
 		font-size: 15px;
@@ -213,5 +231,25 @@ input {
 
 	.deadline-format span {
 		font-size: 8px;
+	}
+}
+@media screen and (min-width: 600px) {
+	button:hover {
+		color: var(--bg);
+		background-color: var(--text-color);
+	}
+	.mode:hover {
+		color: var(--bg);
+		background-color: var(--text-color);
+	}
+}
+@media screen and (max-width: 600px) {
+	button:active {
+		color: var(--bg);
+		background-color: var(--text-color);
+	}
+	.mode:active {
+		color: var(--bg);
+		background-color: var(--text-color);
 	}
 }
