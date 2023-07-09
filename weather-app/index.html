@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Weather App</title>
+		<link
+			rel="manifest"
+			href="manifest.json" />
+		<link
+			rel="stylesheet"
+			href="style.css" />
+	</head>
+	<body>
+		<div id="root">
+			<!-- Header -->
+			<header class="site__header">
+				<div class="header__wrapper">
+					<!-- Header Elements -->
+				</div>
+			</header>
+			<!-- Main -->
+			<article class="site__inner">
+				<div class="main__wrapper">
+					<div class="main">
+						<div class="container">
+							<!-- <form>
+								<input
+									id="userInput"
+									type="text"
+									placeholder="location" />
+								<button type="submit" onclick="getWeather()">Search</button>
+							</form> -->
+
+							<img
+								src=""
+								alt=""
+								id="weather-icon" />
+							<div class="weather_info">
+								<div class="c">Error</div>
+								<div class="desc"></div>
+								<div id="location">Unable to Fetch Weather</div>
+							</div>
+							<!-- <div class="wind">
+								<img
+									src="wind.png"
+									alt="wind"
+									class="windLogo" />
+								<p class="windSpeed">3.21</p>
+							</div> -->
+
+							<!-- <div class="info">
+							 <h4>
+									 Sunrise: <span class="sunrise">No Information Available</span>
+								</h4>
+								<h4>
+									Sunset: <span class="sunset">No Information Available</span> 
+								</h4> 
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</article>
+			<!-- Footer -->
+			<footer class="site__footer">
+				<div class="footer__wrapper">
+					<!-- Footer Elements -->
+				</div>
+			</footer>
+		</div>
+		<script src="service-worker.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
