@@ -7,3 +7,4 @@
 - [🖋️ Feedback Page](https://feedbackss.netlify.app/)
 - [🔽 Dropdown Navbar](https://dropdow-nav-bar.netlify.app/)
 - [⏱️ CountDown Timer](https://countingdowntimer.netlify.app/)
+- [🌤️ Weather App](https://simpl-weather-app.netlify.app/)
