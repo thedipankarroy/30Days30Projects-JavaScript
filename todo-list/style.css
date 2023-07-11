@@ -242,5 +242,42 @@ form select {
     opacity: 0;
   }
 }
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #706d6d;
+  font-family: "Average Sans", sans-serif;
+}
+.header__wrapper .nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  column-gap: 12px;
+  font-size: 1.25rem;
+  position: relative;
+  top: 4x;
+  margin: 5px;
+}
+.header__wrapper .nav-list a {
+  text-decoration: none;
+  color: white;
+}
+.header__wrapper .nav-list i {
+  color: white;
+}
+.header__wrapper .nav-list i:hover {
+  color: #e98243;
+}
+.header__wrapper .profileLogo {
+  margin: 5px;
+  color: white;
+}
+.header__wrapper .appName {
+  position: absolute;
+  top: 6px;
+  text-align: center;
+  font-size: 1.3rem;
+  left: 46%;
+}
 
 /*# sourceMappingURL=style.css.map */
