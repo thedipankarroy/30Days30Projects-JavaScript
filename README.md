@@ -8,3 +8,4 @@
 - [🔽 Dropdown Navbar](https://dropdow-nav-bar.netlify.app/)
 - [⏱️ CountDown Timer](https://countingdowntimer.netlify.app/)
 - [✅ Todo App](https://todo-istt.netlify.app/)
+- [👟 Nike Mag Sneaker](https://nikemaganimation.netlify.app/)
