@@ -10,8 +10,8 @@ const edition = document.querySelector(".edition")
 
 // MOVING ANIMATION
 container.addEventListener("mousemove", (event) => {
-	let xAxis = (window.innerWidth / 2 - event.pageX) / 20
-	let yAxis = (window.innerHeight / 2 - event.pageY) / 20
+	let xAxis = (window.innerWidth / 2 - event.pageX) / 30
+	let yAxis = (window.innerHeight / 2 - event.pageY) / 30
 	card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
 })
 // ANIMATE OUT
