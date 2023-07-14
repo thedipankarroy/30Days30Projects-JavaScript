@@ -96,30 +96,24 @@ body {
 		flex-direction: column;
 		margin-bottom: 10px;
 		padding: 0px 8px;
-		input {
-			height: 50px;
-			margin-bottom: 20px;
-			border-radius: 8px;
-			border: 1px solid $Grey;
-			padding: 0px 16px;
-			font-size: 15px;
-			color: $Dark-Slate-Grey;
-			&:focus {
-				outline: none;
-				border: 1px solid $Charcoal-Grey;
-			}
-		}
 
 		button {
 			@include button();
 		}
 	}
-
-	label {
-		font-size: 12px;
-		color: $Dark-Slate-Grey;
+	.status {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		margin-bottom: 8px;
 		font-weight: 700;
+		font-size: 12px;
+		label {
+			color: $Dark-Slate-Grey;
+		}
+		p {
+			color: $Tomato;
+		}
 	}
 }
 .signup-success-message {
@@ -134,8 +128,8 @@ body {
 	flex-direction: column;
 	background-color: $White;
 	border-radius: 40px;
-	width: 475px;
-	height: 475px;
+	width: 485px;
+	height: 485px;
 }
 
 .signup-success-message__inner {
@@ -144,14 +138,16 @@ body {
 	padding: 57px;
 
 	h2 {
+		letter-spacing: -1.5%;
 		color: $Dark-Slate-Grey;
-		font-size: 54px;
+		font-size: 50px;
 		font-weight: 700;
 		margin-bottom: 20px;
 		line-height: 1;
-		margin-bottom: 27px;
+		margin-bottom: 25px;
 	}
 	p {
+		letter-spacing: -1.5%;
 		color: $Charcoal-Grey;
 		font-size: 16px;
 		line-height: 1.4;
@@ -163,8 +159,8 @@ body {
 		}
 	}
 	img {
-		height: 62px;
-		margin-bottom: 30px;
+		height: 60px;
+		margin-bottom: 40px;
 	}
 	button {
 		@include button();
@@ -173,4 +169,24 @@ body {
 
 .hidden {
 	display: none;
+}
+
+.userInputonErr {
+	border-color: $Tomato;
+	color: $Tomato;
+	background-color: #ffe8e6;
+}
+
+input {
+	height: 50px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	border: 1px solid $Grey;
+	padding: 0px 16px;
+	font-size: 15px;
+	color: $Dark-Slate-Grey;
+	&:focus {
+		outline: none;
+		border: 1px solid $Charcoal-Grey;
+	}
 }

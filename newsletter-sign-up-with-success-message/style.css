@@ -67,19 +67,6 @@ body {
   margin-bottom: 10px;
   padding: 0px 8px;
 }
-.form-wrapper form input {
-  height: 50px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border: 1px solid hsl(231, 7%, 60%);
-  padding: 0px 16px;
-  font-size: 15px;
-  color: hsl(234, 29%, 20%);
-}
-.form-wrapper form input:focus {
-  outline: none;
-  border: 1px solid hsl(235, 18%, 26%);
-}
 .form-wrapper form button {
   height: 52px;
   border-radius: 8px;
@@ -98,11 +85,19 @@ body {
   background: linear-gradient(to right, hsl(346, 100%, 66%), hsl(4, 100%, 67%));
   box-shadow: 0px 16px 20px 8px rgba(255, 82, 122, 0.2);
 }
-.form-wrapper label {
-  font-size: 12px;
-  color: hsl(234, 29%, 20%);
+.form-wrapper .status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 8px;
   font-weight: 700;
+  font-size: 12px;
+}
+.form-wrapper .status label {
+  color: hsl(234, 29%, 20%);
+}
+.form-wrapper .status p {
+  color: hsl(4, 100%, 67%);
 }
 
 .signup-success-message {
@@ -117,8 +112,8 @@ body {
   flex-direction: column;
   background-color: hsl(0, 0%, 100%);
   border-radius: 40px;
-  width: 475px;
-  height: 475px;
+  width: 485px;
+  height: 485px;
 }
 
 .signup-success-message__inner {
@@ -127,14 +122,16 @@ body {
   padding: 57px;
 }
 .signup-success-message__inner h2 {
+  letter-spacing: -1.5%;
   color: hsl(234, 29%, 20%);
-  font-size: 54px;
+  font-size: 50px;
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 }
 .signup-success-message__inner p {
+  letter-spacing: -1.5%;
   color: hsl(235, 18%, 26%);
   font-size: 16px;
   line-height: 1.4;
@@ -146,8 +143,8 @@ body {
   font-weight: 700;
 }
 .signup-success-message__inner img {
-  height: 62px;
-  margin-bottom: 30px;
+  height: 60px;
+  margin-bottom: 40px;
 }
 .signup-success-message__inner button {
   height: 52px;
@@ -170,6 +167,26 @@ body {
 
 .hidden {
   display: none;
+}
+
+.userInputonErr {
+  border-color: hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+  background-color: #ffe8e6;
+}
+
+input {
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid hsl(231, 7%, 60%);
+  padding: 0px 16px;
+  font-size: 15px;
+  color: hsl(234, 29%, 20%);
+}
+input:focus {
+  outline: none;
+  border: 1px solid hsl(235, 18%, 26%);
 }
 
 /*# sourceMappingURL=style.css.map */

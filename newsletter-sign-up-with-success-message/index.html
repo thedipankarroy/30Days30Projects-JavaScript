@@ -71,13 +71,22 @@
 				</div>
 				<!-- Sign-up form start -->
 				<form>
-					<label for="userInput">Email address</label>
+					<div class="status">
+						<label for="userInput">Email address</label>
+            <p class="errorMsg hidden">Valid email required</p>
+					</div>
+
 					<input
 						type="email"
 						name="userEmail"
 						id="userInput"
+            class=""
 						placeholder="email@company.com" />
-					<button type="submit" onclick="showSuccessMessage()">Subscribe to monthly newsletter</button>
+					<button
+						type="submit"
+						onclick="showSuccessMessage()">
+						Subscribe to monthly newsletter
+					</button>
 				</form>
 				<!-- Sign-up form end -->
 			</div>
@@ -437,13 +446,13 @@
 				<h2>Thanks for subscribing!</h2>
 				<p class="signupMessage">
 					A confirmation email has been sent to
-					<span class="email">ash@loremcompany.com</span>. Please open it and click the button
-					inside to confirm your subscription.
+					<span class="email">ash@loremcompany.com</span>. Please open it and
+					click the button inside to confirm your subscription.
 				</p>
 				<button onclick="backToSubscription()">Dismiss Message</button>
 			</div>
 		</div>
 		<!-- Success message end -->
-    <script src="app.js"></script>
+		<script src="app.js"></script>
 	</body>
 </html>
