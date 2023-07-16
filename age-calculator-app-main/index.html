@@ -25,7 +25,9 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
 			rel="stylesheet" />
-    <script defer src="./app.js"></script>
+		<script
+			defer
+			src="./app.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -36,7 +38,7 @@
 						type="text"
 						id="day"
 						placeholder="DD" />
-            <p class="errorMsgDay errorStatus"></p>
+					<p class="errorMsgDay errorStatus hidden"></p>
 				</div>
 				<div class="userInput">
 					<label for="month">Month</label>
@@ -44,7 +46,7 @@
 						type="text"
 						id="month"
 						placeholder="MM" />
-            <p class="errorMsgMonth errorStatus"></p>
+					<p class="errorMsgMonth errorStatus hidden"></p>
 				</div>
 				<div class="userInput">
 					<label for="year">Year</label>
@@ -52,12 +54,12 @@
 						type="text"
 						id="year"
 						placeholder="YYYY" />
-            <p class="errorMsgYear errorStatus"></p>
+					<p class="errorMsgYear errorStatus hidden"></p>
 				</div>
 			</div>
 			<div class="wall">
 				<hr class="line" />
-				<button class="submit" onclick="checkInputs()">
+				<button class="submit">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="46"
