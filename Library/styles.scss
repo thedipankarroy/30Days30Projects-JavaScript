@@ -1,0 +1,169 @@
+:root {
+	font-size: 16px;
+}
+body {
+	color: white;
+	background-color: rgb(145, 141, 141);
+	font-family: sans-serif;
+}
+a {
+	color: white;
+}
+.header__wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70px;
+	background-color: black;
+}
+.nav {
+	display: flex;
+	column-gap: 5rem;
+	font-size: 1.3rem;
+}
+
+.nav__pages {
+	display: flex;
+	column-gap: 1rem;
+	a,
+	div {
+		padding: 0.8rem 0.5rem;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+.nav__search {
+	flex-grow: 1;
+	padding: 0.3rem 0;
+	input {
+		padding: 0.6rem;
+		border: 1px solid lightgrey;
+		border-radius: 0.5rem;
+		font-size: 1.1rem;
+		outline: none;
+		&:hover {
+			background-color: lightgrey;
+		}
+	}
+	.searchBtn {
+		padding: 0.7rem 1rem;
+		background-color: rgb(28, 27, 27);
+		border: 1px solid white;
+		border-radius: 0.5rem;
+		color: white;
+		margin-left: 0.2rem;
+		cursor: pointer;
+		&:hover{
+			background-color: rgb(125, 123, 123);
+		}
+	}
+}
+
+.book-list {
+	display: flex;
+	padding: 1rem;
+	column-gap: 1rem;
+	row-gap: 1rem;
+	flex-wrap: wrap;
+	.book-item {
+		border-radius: 0.3rem;
+		background-color: #3f3e3e;
+		padding: 11px;
+		width: 295px;
+		height: 310px;
+		&:hover {
+			background-color: #5e5c5c;
+		}
+
+		.imageCover-div {
+			height: 200px;
+			img {
+				border-radius: 0.3rem;
+			}
+		}
+
+		.info {
+			margin-top: 10px;
+			text-align: center;
+			h3 {
+				color: white;
+				font-size: 1.1rem;
+				font-weight: 600;
+			}
+			.author,
+			.pagesRead {
+				color: lightgrey;
+				font-size: 0.9rem;
+				margin: 5px 0;
+			}
+		}
+	}
+}
+
+.newButtonArea {
+	position: fixed;
+	bottom: 10px;
+	text-align: center;
+	width: 100%;
+}
+
+.newBookBtn {
+	background-color: #3f3e3e;
+	color: white;
+	padding: 0.8rem 1.5rem;
+	border: 1px solid white;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	&:hover {
+		background-color: #5e5c5c;
+	}
+}
+
+.modal {
+	background-color: rgb(46, 45, 45);
+	color: #f9f3f3;
+	position: fixed;
+	top: 50%;
+	width: 300px;
+	height: 400px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 1rem;
+	h2 {
+		font-size: 1.5rem;
+		margin: 0 0 1rem;
+	}
+	.inputFields {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		input {
+			padding: 0.5rem;
+			border: 1px solid grey;
+			border-radius: 0.3rem;
+			outline: none;
+		}
+		label {
+			font-size: 1.1rem;
+			margin-bottom: 0.5rem;
+			color: grey;
+		}
+		.submitBtn,
+		.exitBtn {
+			padding: 0.8rem 1.5rem;
+			border: 1px solid grey;
+			border-radius: 0.3rem;
+			cursor: pointer;
+			background-color: #3f3e3e;
+			color: white;
+			&:hover {
+				background-color: #5e5c5c;
+			}
+		}
+	}
+}
