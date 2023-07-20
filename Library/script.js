@@ -74,7 +74,7 @@ function render() {
 		div.classList.add("book-item")
 		div.innerHTML = `
         <div class="imageCover-div">
-            <img  class="bookItem__cover" src="morgan-housel-aZ_MmSmAcjg-unsplash.jpg" alt="cover" style="height:100%; width: 100%;object-fit: cover;">
+            <img  class="bookItem__cover" src="bookcover.jpg" alt="cover" style="height:100%; width: 100%;object-fit: cover;">
         </div>
         <div class="info">
             <h3 class="bookItem__title">${book.title}</h3> 
