@@ -24,14 +24,17 @@
 		<script
 			defer
 			src="script.js"></script>
-			<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+		<link
+			rel="shortcut icon"
+			href="favicon.png"
+			type="image/x-icon" />
 	</head>
 	<body>
 		<div id="root">
 			<!-- Header -->
 			<header class="site__header">
 				<div class="header__wrapper">
-					<div class="nav">
+					<nav class="nav">
 						<div class="nav__pages">
 							<div class="navbar__branding">library</div>
 							<div class="nav__links">
@@ -49,43 +52,57 @@
 								placeholder="Search" />
 							<button class="searchBtn"><i class="fa fa-search"></i></button>
 						</div>
-						<div
-							class="toggle"
-							style="display: none">
+						<!-- <div
+							class="toggle">
 							<i class="fa-solid fa-bars"></i>
-						</div>
-					</div>
+						</div> -->
+					</nav>
 				</div>
 			</header>
 			<!-- Main -->
-			<article class="site__inner">
-				<div class="main__wrapper">
-					<div class="main">
+			<section class="site__inner">
+				<div class="main">
+					<div class="main__wrapper">
+						<!-- This section will contain all user's book -->
 						<section class="book-list"></section>
-
+						<!-- Form that will popup when clicked the New Book Button -->
 						<div class="modal">
 							<div class="form">
+								<!-- Modal Heading -->
 								<h2>Add New Book</h2>
+								<!-- Main Form -->
 								<form id="book-form">
+									<!-- Input Fields-->
 									<div class="inputFields">
 										<label for="title">Title</label>
+										<!-- Enter the title of the book -->
 										<input
 											type="text"
-											id="title" />
+											id="title" required/>
 										<label for="author">Author</label>
+										<!-- Enter the author of the book -->
 										<input
 											type="text"
-											id="author" />
-										<label for="pages">Pages Read</label>
-										<input
+											id="author" required/>
+                    <!-- Input for number of pages -->
+										<label for="pages">Pages</label>
+                    <input 
 											type="number"
-											id="pages" />
+                      id="pages"
+                      required min="0"/>
+                      <!-- Radio Buttons for Read or Not Read -->
+										<div class="read">
+                      <label for="isread">Have you Read it?</label>
+											<input type="checkbox" value="Read" id="isread" >
+										</div>
+                    <!-- Submit Button -->
 										<div class="modal-buttons">
 											<button
 												type="submit"
 												class="submitBtn">
 												<i class="fa-solid fa-check"></i>
 											</button>
+                      <!-- Exit Form Button -->
 											<button class="exitBtn">
 												<span><i class="fa-regular fa-circle-xmark"></i></span>
 											</button>
@@ -94,7 +111,7 @@
 								</form>
 							</div>
 						</div>
-
+						<!-- New Book Button -->
 						<div class="newButtonArea">
 							<button class="newBookBtn">
 								<i class="fa fa-plus"></i>
@@ -103,7 +120,7 @@
 						</div>
 					</div>
 				</div>
-			</article>
+			</section>
 		</div>
 	</body>
 </html>

@@ -5,7 +5,8 @@ let myLibrary = [
 	{
 		title: "How Innovation Works",
 		author: "Matt Ridley",
-		pagesRead: 200,
+		pages: 200,
+		isread: true,
 	},
 ]
 const submitBtn = document.querySelector(".submitBtn")
@@ -29,30 +30,33 @@ newBookBtn.addEventListener("click", () => {
 })
 exitBtn.addEventListener("click", () => {
 	event.preventDefault()
-	hideForm()	
+	hideForm()
 })
 
 // ==========
 // FUNCTIONS
 // ==========
-function Book(title, author, pagesRead) {
+function Book(title, author, pages, isread) {
 	this.title = title
 	this.author = author
-	this.pagesRead = pagesRead
+	this.pages = pages
+	this.isread = isread
 }
 function addBookToLibrary() {
 	//storing the user input in a object after user submits
 	const title = document.getElementById("title").value
 	const author = document.getElementById("author").value
-	const pagesRead = document.getElementById("pages").value
+	const pages = document.getElementById("pages").value
+	const isread = document.getElementById("isread").checked // if checked true else false
 
 	// making a newBook object from Book Constructor
-	const newBook = new Book(title, author, pagesRead)
+	const newBook = new Book(title, author, pages, isread)
 
-	//clearing out the values in the inputs after sumbission
+	// clearing out the values in the inputs after sumbission
 	document.getElementById("title").value = ""
 	document.getElementById("author").value = ""
 	document.getElementById("pages").value = ""
+	document.getElementById("isread").checked = false
 
 	// pushing the newBook object to the array myLibrary
 	myLibrary.push(newBook)
@@ -69,7 +73,7 @@ function render() {
 	const bookList = document.querySelector(".book-list")
 	bookList.innerHTML = ""
 
-	myLibrary.forEach((book) => {
+	myLibrary.forEach((book, index) => {
 		const div = document.createElement("div")
 		div.classList.add("book-item")
 		div.innerHTML = `
@@ -79,7 +83,9 @@ function render() {
         <div class="info">
             <h3 class="bookItem__title">${book.title}</h3> 
             <p class="bookItem__author">By ${book.author}</p>
-            <p class="bookItem__pagesRead">${book.pagesRead} pages read</p>
+            <p class="bookItem__pages">${book.pages} Pages</p>
+			<button class="deleteBook" onclick="deleteBook(${index})">Delete</button>
+			<button class="bookItem__read" onclick="changeReadStatus(${index})">${book.isread ? "Read" : "Not Read"}</button>
         <div>
         `
 		bookList.appendChild(div)
@@ -88,7 +94,15 @@ function render() {
 function hideForm() {
 	modal.style.display = "none"
 }
-
+function deleteBook(index) {
+	myLibrary.splice(index, 1)
+	render()
+}
+function changeReadStatus (bookIndex) {
+	const book = myLibrary[bookIndex]
+	book.isread = !book.isread  
+	render()
+}
 
 //USING API TO GET BOOK COVER
 //USING SOME KIND OF DATABASE TO STORE DATA
